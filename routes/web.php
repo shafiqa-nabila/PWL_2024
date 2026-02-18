@@ -8,6 +8,9 @@ use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\PhotoController;
 
+Route::get('/greeting', [WelcomeController::class, 'greeting']);
+
+
 Route::resource('photos', PhotoController::class);
 Route::resource('photos', PhotoController::class)->only([
     'index', 'show'
